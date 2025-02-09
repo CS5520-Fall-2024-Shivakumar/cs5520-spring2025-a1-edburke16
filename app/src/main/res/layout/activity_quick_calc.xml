@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+  <!-- Display for calculator output -->
+  <TextView
+      android:id="@+id/calc_display"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="@string/calc"
+      android:textSize="24sp"
+      android:gravity="center"
+      android:padding="8dp"
+      android:background="@android:color/darker_gray"
+      android:textColor="@android:color/white"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Grid of buttons -->
+  <androidx.gridlayout.widget.GridLayout
+      android:id="@+id/button_grid"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="16dp"
+      app:columnCount="4"
+      app:layout_constraintTop_toBottomOf="@id/calc_display"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:rowCount="4">
+
+    <Button android:id="@+id/btn_7" android:text="7"/>
+    <Button android:id="@+id/btn_8" android:text="8"/>
+    <Button android:id="@+id/btn_9" android:text="9"/>
+    <Button android:id="@+id/btn_add" android:text="+" />
+
+    <Button android:id="@+id/btn_4" android:text="4"/>
+    <Button android:id="@+id/btn_5" android:text="5"/>
+    <Button android:id="@+id/btn_6" android:text="6"/>
+    <Button android:id="@+id/btn_subtract" android:text="-" />
+
+    <Button android:id="@+id/btn_1" android:text="1"/>
+    <Button android:id="@+id/btn_2" android:text="2"/>
+    <Button android:id="@+id/btn_3" android:text="3"/>
+    <Button android:id="@+id/btn_backspace" android:text="x" />
+
+    <Button android:id="@+id/btn_0" android:text="0" app:layout_columnSpan="2"/>
+    <Button android:id="@+id/btn_equals" android:text="=" app:layout_columnSpan="2"/>
+  </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

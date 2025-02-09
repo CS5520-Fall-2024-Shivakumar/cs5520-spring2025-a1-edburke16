@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import android.content.Intent;
+import android.view.View;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,11 +30,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the button by ID
         Button button1 = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
 
         // Set click listener for the button
         button1.setOnClickListener(v -> {
             // Show a toast message
             Toast.makeText(MainActivity.this, "Edward Burke burke.e@northeastern.edu", Toast.LENGTH_SHORT).show();
+        });
+
+        // Set click listener for the button
+        button2.setOnClickListener(new View.OnClickListener(){
+            // Go to QuickCalc
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QuickCalc.class);
+                startActivity(intent);
+            }
         });
     }
 }
