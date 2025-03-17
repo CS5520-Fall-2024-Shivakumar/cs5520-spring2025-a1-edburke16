@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NUMAD25Sp_EdwardBurke"
         tools:targetApi="31">
         <activity
+            android:name=".PrimeFinder"
+            android:exported="false" />
+        <activity
             android:name=".Contacts"
             android:exported="false" />
         <activity
